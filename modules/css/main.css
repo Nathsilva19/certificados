@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    margin: 150px;
+    text-align: center;
+}
+main .main-input {
+    width: 400px;
+    margin: 0 auto;
+    display: inline-block;
+}
+main .main-input .search-button input{
+    margin: 20px;
+    height: 36px;
+    background-color: #1edd5d;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+main .main-input .search-button input:hover{
+    background-color: #1edd5d;
+    color: #303030;
+    cursor: pointer;
+    box-shadow: 2px 3px 6px 2px #20212447;
+    border-color: #dfe1e500 ;
+}
+
+main .main-input .load-button input{
+    font-size: 16px;
+}
