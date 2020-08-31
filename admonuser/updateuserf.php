@@ -1,3 +1,20 @@
+<?php 
+    include '../inc/conexion.php';
+    $link=conectar();
+    $id_usuario= $_GET["id_usuario"];
+    $sql = "SELECT * FROM usuarios WHERE id_usuario=$id_usuario";
+    $result=mysqli_query($link,$sql) or die ("ERROR en la Consulta $sql".mysqli_error($link));
+    if($result->num_rows>0){
+        while($r=$result->fetch_array()){
+            $identificacion=$r["Identificacion"];
+            $nombre=$r["Nombre"];
+            $correo=$r["Correo"];
+            $rol=$r["rol"];
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,22 +117,22 @@
                     <h1>A continuacion se encuentra el formulario para crear usuarios.</h1>
                 </div>
                 <div class="form-box">
-                    <form action="createuserb.php" method="post">
+                    <form action="updateuserb.php?id_usuario=<?php echo $_GET["id_usuario"];?>" method="post">
                         <h2>Crea usuario</h2>
                         <p>Identificacion medico</p>
-                        <input type="text" name="id_user" placeholder="Ingresa identificación" required>
+                        <input type="text" name="id_user" placeholder="Ingresa identificación" value="<?php echo $identificacion ?>" required>
                         <p>Nombre completo medico</p>
-                        <input type="text" name="nom_user" placeholder="Ingresa nombre del medico" required>
+                        <input type="text" name="nom_user" placeholder="Ingresa nombre del medico" value="<?php echo $nombre ?>" required>
                         <p>Correo electronico</p>
-                        <input type="text" name="email_user" placeholder="Ingresa correo electronico" required>
+                        <input type="text" name="email_user" placeholder="Ingresa correo electronico" value="<?php echo $correo ?>" required>
                         <p>Rol</p>
-                        <select name="rol_user" required />
-                            <option selected>Seleccionar</option>
+                        <select name="rol_user" required>
+                            <option selected><?php echo $rol ?></option>
                             <option value="Administrador">Administrador</option>
                             <option value="Medico">Medico</option>
                         </select>
                         <br>
-                        <button type="submit">Crear usuario</button>
+                        <button type="submit">Actualizar usuario</button>
                     </form>
                 </div>
             </div>

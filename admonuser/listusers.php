@@ -57,6 +57,19 @@
     .btn-delete:hover{
         background-color: rgb(248, 0, 41);
     }
+    .create-button{
+        margin:30px;
+        background-color: rgba(23, 146, 164, 1);
+        padding:8px;
+        border-radius: 10px;
+    }
+    .create-button a{
+        text-decoration: none;
+        color: white;
+    }
+    .create-button:hover{
+        background-color: rgb(20, 178, 202);
+    }
 </style>
 <body>
     <header>
@@ -102,8 +115,11 @@
                             </tr>
                         </tbody>
                     <?php } ?>
-                </table>
+                    </table>
             <?php } ?>
+                <div class="create-button">
+                    <a href="createuserf.php">Crear usuario nuevo</a> 
+                </div>
             </div>
         </main>
     </section>
