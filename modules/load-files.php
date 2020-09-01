@@ -1,3 +1,6 @@
+<?php
+session_start();
+if ($_SESSION) { ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <style>
+    header .container .header-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container .header-logo p{
+        font-weight: 600;
+        font-size: 1.2em;
+        color: white;
+    }
     main .container .lead-text{
         margin-top: 0px;
         margin-bottom: 20px;
@@ -98,6 +112,7 @@
         <div class="container">
             <div class="header-logo">
                 <img src="./img/m.jpg" alt="logo">
+                <p><?php echo $_SESSION['nombre'];?></p>
             </div>
         </div>
     </header>
@@ -152,3 +167,11 @@
 </body>
 
 </html>
+<?php
+}
+else {
+	echo "<script type='text/javascript'>
+		alert('Ud no ha iniciado sesion. Por favor iniciar una sesion');
+		window.location='../login/';
+	</script>";
+} ?>

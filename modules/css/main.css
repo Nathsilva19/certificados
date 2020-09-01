@@ -19,9 +19,6 @@ header {
     align-items: center;
 }
 
-header .container .header-logo{
-    width: 300px;
-}
 .main-background{
     height: 85vh;
     background-image: url("../img/4.png");
