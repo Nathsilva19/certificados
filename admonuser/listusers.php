@@ -111,6 +111,7 @@
                                 <td>
                                     <a class="btn-update" href="updateuserf.php?id_usuario=<?php echo $r["id_usuario"];?>">Actualizar</a>
                                     <a class="btn-delete" href="deleteuserf.php?id_usuario=<?php echo $r["id_usuario"];?>">Borrar</a>
+                                    <a class="btn-update" href="lost_password.php?id_usuario=<?php echo $r["id_usuario"];?>">Reset Password</a>
                                 </td>
                             </tr>
                         </tbody>

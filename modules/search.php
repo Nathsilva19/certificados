@@ -2,7 +2,7 @@
     include '../inc/conexion.php';
     $link=conectar();
     $busqueda = $_REQUEST['search-text'];
-    $sql = "SELECT * FROM load_files, usuarios WHERE load_files.identificacion_paciente=$busqueda";
+    $sql = "SELECT * FROM load_files WHERE load_files.identificacion_paciente=$busqueda";
     $result=mysqli_query($link,$sql) or die ("ERROR en la Consulta $sql".mysqli_error($link));
 ?>
 <!DOCTYPE html>
@@ -68,7 +68,6 @@
                         <tr>
                             <th>Identificacion paciente</th>
                             <th>Nombre del paciente</th>
-                            <th>Nombre doctor</th>
                             <th>Descarga</th>
                         </tr>
                     </thead>
@@ -80,9 +79,6 @@
                                 </td>
                                 <td>
                                     <?php echo $r["nombre_paciente"] ?>
-                                </td>
-                                <td>
-                                    <?php echo $r["Nombre"] ?>
                                 </td>
                                 <td>
                                     <a href="<?php echo $r["ruta_pdf"] ?>">Descarga</a>

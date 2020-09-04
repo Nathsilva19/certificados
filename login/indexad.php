@@ -28,12 +28,13 @@ if ($_SESSION) { ?>
         margin-bottom: 20px;
     }
     main .container .lead-box{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         margin: auto;
     }
     main .container .lead-box .main-box-left{
-        width: 50%;
+        width: 100%;
         margin: 30px;
         padding: 30px;
         text-align: center;
@@ -43,8 +44,23 @@ if ($_SESSION) { ?>
         margin: 0 auto;
         padding: 20px;
     }
+    main .container .lead-box .main-box-left .box-left-content button{
+        width: 200px;
+        height: 43px;
+        border: 1px solid #dfe1e5;
+        background-color: rgb(23, 146, 164);
+        border-radius: 10px;
+        color: white;
+        font-size: 1rem;
+    }
+    main .container .lead-box .main-box-left .box-left-content button:hover{
+        background-color: rgba(23, 146, 164,0.9);
+    }
+    main .container .lead-box .main-box-left .box-left-content button:focus{
+        outline: none;
+    }
     main .container .lead-box .main-box-right{
-        width: 50%;
+        width: 100%;
         border: 1px solid #dfe1e5;
         margin: 30px;
         box-shadow: 1px 1px 1px 1px rgba(23, 24, 24, 0.699);
@@ -53,45 +69,11 @@ if ($_SESSION) { ?>
         background-color: rgba(237, 240, 245, 0.4);
         text-align: center;
     }
-    main .container .lead-box .main-box-right .box-right-content p{
-        font-size: 14px;
-        margin-bottom: 0;
-        text-align:center;
+    main .container .lead-box .main-box-right .box-right-content ul li{
+        margin: 5% auto;
     }
-    main .container .lead-box .main-box-right .box-right-content input{
-        width: 100%;
-        border-radius: 10px;
-        height: 30px;
-        border: 1px solid #dfe1e5;
-        font-size: 14px;
-        padding-left: 5px;
-        text-align: center;
-    }
-    main .container .lead-box .main-box-right .box-right-content input:hover{
-        box-shadow: 2px 3px 6px 2px rgba(23, 24, 24, 0.404);
-        border-color: #dfe1e500 ;
-    }
-    main .container .lead-box .main-box-right .box-right-content input:focus{
-        outline: none;
-    }
-    main .container .lead-box .main-box-right .box-right-content input::placeholder{
-        color: rgba(128, 131, 129, 0.4);
-    }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load{
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-    }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load input{
-        border: none;
-        align-self: center;
-    }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load input:hover{
-        box-shadow: none;
-        border-color: none ;
-    }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load button{
-        width: 100px;
+    main .container .lead-box .main-box-right .box-right-content button{
+        margin: 5% auto;width: 200px;
         height: 43px;
         border: 1px solid #dfe1e5;
         background-color: rgb(23, 146, 164);
@@ -99,11 +81,13 @@ if ($_SESSION) { ?>
         color: white;
         font-size: 1rem;
     }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load button:hover{
-        box-shadow: 2px 3px 6px 2px rgba(23, 24, 24, 0.699);
-        border-color: rgba(23, 146, 164, 1);
+    main .container .lead-box .main-box-right .box-right-content button:hover{
+        background-color: rgba(23, 146, 164,0.9);
     }
-    main .container .lead-box .main-box-right .box-right-content .box-file-load button:focus{
+    main .container .lead-box .main-box-right .box-right-content button:hover{
+        background-color: rgba(23, 146, 164,0.9);
+    }
+    main .container .lead-box .main-box-right .box-right-content button:focus{
         outline: none;
     }
 </style>
@@ -135,7 +119,7 @@ if ($_SESSION) { ?>
                                 <li>Eliminar</li>
                                 <li>Consultar</li>
                             </ul>
-                            <button>admon user</button>
+                            <button onclick="window.location.href='../admonuser/listusers.php'">Administra tus usuarios.</button>
                         </div>
                     </div>
                     <div class="main-box-right">
@@ -144,9 +128,12 @@ if ($_SESSION) { ?>
                         </div>
                         <div class="box-right-content">
                             <ul>
-                                <li>Sube los archivos</li>
+                                <li>Hola</li>
+                                <li>Como</li>
+                                <li>Estas</li>
+                                <li>Heyyyy</li>
                             </ul>
-                            <button>load-file</button>
+                            <button onclick="window.location.href='../modules/load-files.php'">Carga tus certificados.</button>
                         </div>
                     </div>
                 </div>
