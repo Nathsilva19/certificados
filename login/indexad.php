@@ -94,8 +94,8 @@ if ($_SESSION) { ?>
 <body>
     <header>
         <div class="container">
-            <div class="header-logo">
-                <img src="./img/m.jpg" alt="logo">
+        <div class="header-logo">
+                <img src="../img/logo.png" alt="logo" width="300">
                 <p><?php echo $_SESSION['nombre'];?></p>
             </div>
         </div>

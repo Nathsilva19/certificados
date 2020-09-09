@@ -18,8 +18,16 @@ header {
     align-items: center;
 }
 
-header .container .header-logo{
-    width: 300px;
+header .container .header-logo img{
+    width: 200px;
+}
+
+header .container .header-buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+header .container .header-buttons button{
+    margin: 30px;
 }
 header .container .header-button button{
     width: 200px;

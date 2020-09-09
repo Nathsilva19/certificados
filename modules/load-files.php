@@ -106,12 +106,23 @@ if ($_SESSION) { ?>
     main .container .lead-box .main-box-right .box-right-content .box-file-load button:focus{
         outline: none;
     }
+    header .container .header-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container .header-logo p{
+        font-weight: 600;
+        font-size: 1.2em;
+        color: white;
+    }
 </style>
 <body>
     <header>
         <div class="container">
             <div class="header-logo">
-                <img src="./img/m.jpg" alt="logo">
+                <img src="../img/logo.png" alt="logo" width="300">
                 <p><?php echo $_SESSION['nombre'];?></p>
             </div>
         </div>

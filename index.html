@@ -4,19 +4,113 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nombre de la marca</title>
+    <title>COMPENSALUD IPS</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="img/FLATICON SALUD.PNG" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+<style>
+    .main-background{
+    height: 50vh;
+    background-image: url("./img/2.png");
+    background-position: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+    position: relative;
+}
+    main .container .lead-button button{
+    width: 230px;
+    height: 50px;
+    border: 1px solid #dfe1e5;
+    background-color: rgb(23, 146, 164);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+main .container .lead-button button:hover{
+    box-shadow: 2px 3px 6px 2px rgba(23, 24, 24, 0.699);
+    border-color: rgba(23, 146, 164, 1);
+}
+main .container .lead-button button:focus{
+    outline: none;
+}
 
+main .container{
+    height: 100px;
+}
+.info .container .info-tittle{
+    width: 75%;
+    height: inherit;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+.info .container .info-tittle h2{
+    margin: 1px;
+    margin-top:20px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    font-size: 1.9rem;
+    color: rgba(23, 146, 164, 0.7);
+}
+.info .container .info-tittle p{
+    font-size: 1.4rem;
+}
+.info-show .container{
+    width: 60%;
+}
+.info-show .container .info-card{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+.info-show .container .info-card .info-card--units{
+    width: 50%;
+}
+.info-show .container .info-card .info-card--units .container{
+    width: 60%;
+    height: inherit;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+.info-show .container .info-card .info-card--units .container h3{
+    color: rgb(23, 146, 164);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.info-show .container .info-card .info-card--units .container p{
+    font-size: 1.2rem;
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(23, 146, 164);  
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+</style>
 <body>
     <header>
         <div class="container">
             <div class="header-logo">
-                <img src="./img/m.jpg" alt="logo">
+                <img src="./img/logo.png" alt="logo" width="300">
             </div>
-            <div class="header-button">
-                <button onclick="window.location.href='./login/'">INGRESO USUARIOS</button>
+            <div class="header-buttons">
+                <div class="header-button">
+                    <button onclick="window.location.href='./login/'">INGRESO USUARIOS</button>
+                </div>
+                <div class="header-button">
+                    <button onclick="window.location.href='indexf.html'">BUSCA TU CERTIFICADO</button>
+                </div>
             </div>
         </div>
     </header>
@@ -25,24 +119,69 @@
         <main>
             <div class="container">
                 <div class="lead-text">
-                    <h1>Descarga tu certificado en linea</h1>
-                    <h5>Ingresa tu numero de documento y descarga tu certificado</h5>
+                    <h1>Conoce más de Compensalud</h1>
                 </div>
-                <div class="lead-search">
-                    <form action="modules/search.php" method="post">
-                        <input type="text" name="search-text" placeholder="Ingresa numero de documento">
-                        <button type="submit">Buscar</button>
-                    </form>
-                </div>
-                <div class="lead-text-sub">
-                    <p>Si necesitas ayuda puedes escribirnos al <a href="" target="_blank">3208161492</a></p>
+                <div class="lead-button">
+                    <button>¿Necesitas ayuda?</button>
                 </div>
             </div>
         </main>
     </section>
-    <footer>
-
-    </footer>
+    <section class="info">
+        <div class="container">
+            <div class="info-tittle">
+                <h2>COMPENSALUD IPS es una Institución comprometida con la Región.</h2>
+                <p>Brindamos servicios de mediana y baja complejidad, orientados a contribuir con el bienestar y la salud de nuestros usuarios, con profesionales e infraestructura idónea, alto grado de responsabilidad social y estándares de calidad.</p>
+            </div>
+        </div>
+        <div class="info-show">
+            <div class="container">
+                <div class="info-card">
+                    <div class="info-card--units">
+                        <div class="container">
+                            <img src="./img/eye.png" alt="">
+                            <h3>VISIÓN</h3>
+                            <p>Ofrecer servicios de salud, de mediana y baja complejidad, de forma integral y con calidez humana.</p>
+                        </div>
+                    </div>
+                    <div class="info-card--units">
+                        <div class="container">
+                            <img src="./img/stats.png" alt="">
+                            <h3>MISIÓN</h3>
+                            <p>Ser la IPS líder en la región para el 2024 ofreciendo un modelo integral de salud, mediante su capacidad tecnológica, científica y humana.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-card--units">
+                        <div class="container">
+                            <img src="#" alt="">
+                            <h3>PROMESA DE SERVICIO</h3>
+                            <p>Nuestra razón de ser son los usuarios, nuestro compromiso es su bienestar. Es nuestra prioridad y responsabilidad satisfacer las necesidades del cliente. Brindar un servicio cálido, con ética y humanizado. Cultura de trato digno, amable y respetuoso.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-card--units">
+                        <div class="container">
+                            <img src="#" alt="">
+                            <h3>PROMESA DE VALOR</h3>
+                            <p>Contamos con profesionales caliﬁcados, con amplia experiencia e infraestructura idónea.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <div class="left">
+                <p>IPS: ESPECIALISTAS EN SALUD OCUPACIONAL.</p>
+            </div>
+            <div class="rigth">
+                <p>Calle 27 Sur #21-49 Barrio Olaya.</p>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

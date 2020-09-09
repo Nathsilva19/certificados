@@ -1,4 +1,5 @@
 <?php
+session_start();
     include '../inc/conexion.php';
     $link=conectar();
     $sql = "SELECT * FROM usuarios";
@@ -70,12 +71,24 @@
     .create-button:hover{
         background-color: rgb(20, 178, 202);
     }
+    header .container .header-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container .header-logo p{
+        font-weight: 600;
+        font-size: 1.2em;
+        color: white;
+    }
 </style>
 <body>
     <header>
         <div class="container">
-            <div class="header-logo">
-                <img src="./img/m.jpg" alt="logo">
+        <div class="header-logo">
+                <img src="../img/logo.png" alt="logo" width="300">
+                <p><?php echo $_SESSION['nombre'];?></p>
             </div>
         </div>
     </header>
