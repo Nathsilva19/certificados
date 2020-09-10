@@ -7,7 +7,8 @@ if ($_SESSION) { ?>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nombre de la marca</title>
+    <title>COMPENSALUD IPS</title>
+    <link rel="shortcut icon" href="../img/FLATICON SALUD.PNG" type="image/x-icon">
     <link rel="stylesheet" href="../css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
@@ -34,7 +35,7 @@ if ($_SESSION) { ?>
         margin: auto;
     }
     main .container .lead-box .main-box-left{
-        width: 100%;
+        width: 50%;
         margin: 30px;
         padding: 30px;
         text-align: center;
@@ -42,7 +43,9 @@ if ($_SESSION) { ?>
     main .container .lead-box .main-box-left li{
         width: 80%;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
+        font-size: 1.2rem;
+        text-align: left;
     }
     main .container .lead-box .main-box-left .box-left-content button{
         width: 200px;
@@ -68,9 +71,16 @@ if ($_SESSION) { ?>
         padding: 30px;
         background-color: rgba(237, 240, 245, 0.4);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-top: 60px;
     }
     main .container .lead-box .main-box-right .box-right-content ul li{
         margin: 5% auto;
+        list-style: none;
+        font-size: 1.2rem;
     }
     main .container .lead-box .main-box-right .box-right-content button{
         margin: 5% auto;width: 200px;
@@ -128,10 +138,7 @@ if ($_SESSION) { ?>
                         </div>
                         <div class="box-right-content">
                             <ul>
-                                <li>Hola</li>
-                                <li>Como</li>
-                                <li>Estas</li>
-                                <li>Heyyyy</li>
+                                <li>Elige el archivo que deseas subir o actualizar, recuerda que solo están permitidos archivos en formatos PDF y un máximo de 100 KB</li>
                             </ul>
                             <button onclick="window.location.href='../modules/load-files.php'">Carga tus certificados.</button>
                         </div>
