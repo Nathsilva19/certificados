@@ -117,14 +117,56 @@ if ($_SESSION) { ?>
         font-weight: 600;
         font-size: 1.2em;
         color: white;
+        padding-right: 30px;
+    }
+    header .container .header-logo .headers-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header .container .header-logo .headers-buttons button{
+        width: 150px;
+        height: 50px;
+        border: 1px solid black;
+        background-color: rgba(23, 146, 164, 1);
+        border-radius: 10px;
+        color: white;
+        font-size: 1.1rem;
+        box-shadow: 2px 3px 6px 2px #20212447;
+        border-color: rgba(23, 146, 164, 1);
+    }
+    header .container .header-logo .headers-buttons button:hover{
+        box-shadow: 2px 3px 6px 2px rgba(23, 24, 24, 0.699);
+        border-color: rgba(23, 146, 164, 1);
+    }
+    header .container .header-logo .headers-buttons button:focus{
+        outline: none;
     }
 </style>
 <body>
     <header>
         <div class="container">
             <div class="header-logo">
-                <img src="../img/logo.png" alt="logo" width="300">
-                <p><?php echo $_SESSION['nombre'];?></p>
+                <?php
+                if ($_SESSION['rol']== "Administrador"){
+                ?>
+                <a href="../login/indexad.php">
+                    <img src="../img/logo.png" alt="logo" width="300">
+                </a>
+                <?php 
+                }elseif ($_SESSION['rol']=="Medico"){
+                ?>
+                <a href="./load-files.php">
+                    <img src="../img/logo.png" alt="logo" width="300">
+                </a>
+                <?php 
+                }
+                ?>
+                <div class="headers-buttons">
+                    <p><?php echo $_SESSION['nombre'];?></p>
+                    <button onclick="window.location.href='../inc/closesession.php'">Cerrar sesion</button>
+                </div>
+                
             </div>
         </div>
     </header>
